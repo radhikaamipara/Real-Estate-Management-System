@@ -1,0 +1,223 @@
+/* Quick Demo Bar - Top Bar */
+.quick-demo-bar {
+  background: linear-gradient(90deg, #091326 0%, #0f1d3a 50%, #091326 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  font-size: 0.825rem;
+  padding: 0.45rem 0;
+  position: relative;
+  z-index: 1010;
+}
+
+.demo-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.demo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+}
+
+.sparkle-icon {
+  color: #fde047;
+}
+
+.demo-hint-text {
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.demo-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.demo-role-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.775rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+
+.demo-role-btn.admin {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+.demo-role-btn.admin:hover,
+.demo-role-btn.admin.active {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+}
+
+.demo-role-btn.agent {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+.demo-role-btn.agent:hover,
+.demo-role-btn.agent.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.demo-role-btn.buyer {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #86efac;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+.demo-role-btn.buyer:hover,
+.demo-role-btn.buyer.active {
+  background-color: #059669;
+  color: #ffffff;
+  border-color: #10b981;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4);
+}
+
+.check-icon {
+  margin-left: 2px;
+}
+
+.demo-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.demo-user-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+}
+
+.user-greeting strong {
+  color: #ffffff;
+}
+
+.demo-dash-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #60a5fa;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.demo-dash-link:hover {
+  color: #93c5fd;
+}
+
+.demo-logout-btn {
+  color: #f87171;
+  padding: 0.2rem;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.demo-logout-btn:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+.demo-guest-text {
+  color: #94a3b8;
+  font-size: 0.775rem;
+}
+
+.demo-guide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.demo-guide-btn:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 900px) {
+  .quick-demo-bar {
+    padding: 0.4rem 0;
+  }
+  .demo-bar-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .demo-hint-text {
+    display: none;
+  }
+  .demo-tag {
+    font-size: 0.65rem;
+  }
+  .demo-role-btn {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.725rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .demo-bar-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+  .demo-bar-left,
+  .demo-bar-actions,
+  .demo-bar-right {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .demo-bar-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+  .demo-role-btn {
+    justify-content: center;
+  }
+}

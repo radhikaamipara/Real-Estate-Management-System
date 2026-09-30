@@ -1,0 +1,207 @@
+/* Dashboard Sidebar Styles */
+.dashboard-layout {
+  display: flex;
+  min-height: calc(100vh - 72px);
+  background-color: #f8fafc;
+}
+
+.dashboard-sidebar {
+  width: 270px;
+  background-color: #ffffff;
+  border-right: 1.5px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header {
+  padding-bottom: 1.25rem;
+  border-bottom: 1.5px solid var(--border-light);
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-role-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-user-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.sidebar-user-email {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: #334155;
+  transition: var(--transition);
+}
+
+.sidebar-nav-item:hover {
+  background-color: var(--bg-subtle);
+  color: var(--brand-blue);
+}
+
+.sidebar-nav-item.active {
+  background-color: #eff6ff;
+  color: var(--brand-blue);
+  font-weight: 800;
+  border-left: 3px solid var(--brand-blue);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1.5px solid var(--border-light);
+}
+
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  width: 100%;
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: #dc2626;
+  transition: var(--transition);
+}
+
+.sidebar-logout-btn:hover {
+  background-color: #fee2e2;
+}
+
+.mobile-header-logout {
+  display: none;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+/* Tablet & Mobile Screens */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid var(--border-light);
+    padding: 0.85rem 1rem;
+    position: sticky;
+    top: 72px;
+    z-index: 95;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.65rem;
+    margin-bottom: 0.65rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .sidebar-user-name {
+    font-size: 0.95rem;
+  }
+
+  .sidebar-user-email {
+    display: none;
+  }
+
+  .sidebar-role-badge {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+  }
+
+  .mobile-header-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #dc2626;
+    background-color: #fee2e2;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.25rem 0.1rem;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-nav-item {
+    flex-shrink: 0;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.825rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-surface);
+    gap: 0.4rem;
+  }
+
+  .sidebar-nav-item.active {
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    border-color: var(--brand-blue);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  }
+
+  .sidebar-nav-item.active svg {
+    color: #ffffff;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .dashboard-content {
+    padding: 1.25rem 1rem;
+  }
+}
